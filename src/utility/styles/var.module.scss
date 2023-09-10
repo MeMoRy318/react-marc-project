@@ -1,0 +1,26 @@
+$color-red:red;
+$color-white:white;
+$color-black: #141414;
+$color-blue:blue;
+
+@mixin widthAndHeight($w,$h){
+  width: $w;
+  height: $h;
+}
+
+@mixin fontSizeWeight ($s,$w){
+  font-weight: $w;
+  font-size: $s;
+}
+
+.blockCentering{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}

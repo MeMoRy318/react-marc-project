@@ -1,0 +1,63 @@
+.neon {
+  color: #fff;
+  text-shadow:
+          0 0 7px #fff,
+          0 0 9px #fff,
+          0 0 19px #fff,
+          0 0 38px #0fa,
+          0 0 74px #0fa,
+          0 0 81px #0fa,
+          0 0 922px #0fa,
+          0 0 135px #0fa;
+}
+
+.pulsate {
+  animation: pulsate 1.5s infinite alternate;
+}
+
+.container {
+  font-family: Segoe Print ,sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.container:nth-child(1){
+  color: #3498db;
+}
+@keyframes pulsate {
+
+  100% {
+
+    text-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 17px #fff,
+            0 0 36px #0fa,
+            0 0 72px #0fa,
+            0 0 81px #0fa,
+            0 0 90px #0fa,
+            0 0 135px #0fa;
+
+  }
+
+  0% {
+
+    text-shadow: 0 0 2px #fff,
+    0 0 4px #fff,
+    0 0 6px #fff,
+    0 0 9px #0fa,
+    0 0 41px #0fa,
+    0 0 50px #0fa,
+    0 0 63px #0fa,
+    0 0 72px #0fa;
+  }
+}
+
+
+
+
+
+
+
+
+

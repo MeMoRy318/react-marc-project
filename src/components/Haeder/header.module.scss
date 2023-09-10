@@ -1,0 +1,15 @@
+@import "../../utility/styles/var.module";
+.header{
+  @include widthAndHeight(100%,12%);
+  background: $color-black;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  flex: 0 0 auto;
+
+  .header__naw{
+    width: 30%;
+    display: flex;
+    column-gap: 12%;
+  }
+}
