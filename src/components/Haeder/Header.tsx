@@ -1,6 +1,6 @@
 import React, { FC, PropsWithChildren } from 'react';
 
-import { BurgerMenu, Logotype, SearchInput } from '../../UI';
+import { BurgerMenu, Logotype, SearchInput, ToggleSwitch, UserInfo } from '../../UI';
 
 import styles from './header.module.scss';
 
@@ -14,6 +14,10 @@ const Header: FC<IProps> = () => {
                 <Logotype/>
             </div>
             <SearchInput/>
+            <div className={styles.header__User_info}>
+                <ToggleSwitch/>
+                <UserInfo/>
+            </div>
         </header>
     );
 };

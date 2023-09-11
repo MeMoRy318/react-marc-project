@@ -12,4 +12,12 @@
     display: flex;
     column-gap: 12%;
   }
+
+  .header__User_info{
+    column-gap: 5%;
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
 }

@@ -1,1 +1,20 @@
 @import "./utility/styles/normalize.module.scss";
+::-webkit-scrollbar {
+    width: 10px; /* Set the width of the scrollbar */
+}
+
+/* Styling the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background-color: #888; /* Set the color of the thumb */
+    border-radius: 5px; /* Set the border radius to make it round */
+}
+
+/* Optionally, you can style the scrollbar track on hover */
+::-webkit-scrollbar:hover {
+    width: 12px; /* Increase the width of the scrollbar on hover */
+}
+
+/* Optionally, you can style the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Change the color of the thumb on hover */
+}

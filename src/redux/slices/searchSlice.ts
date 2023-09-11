@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-
 import { AxiosError } from 'axios';
 
 import { IMovieListResponse, IMovies, ISearchParams } from '../../interface';
@@ -35,20 +34,25 @@ const searchMovies = createAsyncThunk<IMovieListResponse, ISearchParams>(
 );
 
 const searchSlice = createSlice({
-    name: 'movieSlice',
+    name: 'searchSlice',
     initialState,
     reducers: {
         clearMoviesArray: state => {
             state.movies = [];
+            state.total_pages = 1;
+            state.page = 1;
         },
     },
     extraReducers: builder => builder
         .addCase(searchMovies.fulfilled, (state, action) => {
             state.error = null;
-            state.isLoading = null;
-            state.movies = action.payload.results;
+            state.isLoading = false;
+            state.movies = [...state.movies, ...action.payload.results];
             state.total_pages = action.payload.total_pages;
             state.page = action.payload.page;
+        })
+        .addCase(searchMovies.pending, state => {
+            state.isLoading = true;
         }),
 });
 

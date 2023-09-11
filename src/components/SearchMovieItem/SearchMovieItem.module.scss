@@ -1,0 +1,36 @@
+@import "../../utility/styles/var.module";
+
+.movieItem{
+  display: flex;
+  @include widthAndHeight(100%,50%);
+  margin-bottom: 4%;
+  justify-content: space-between;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 500ms ease;
+
+  &:hover{
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    background: #333333;
+  }
+}
+.movieItem__image{
+  @include widthAndHeight(35%,100%);
+  padding: 5px;
+}
+.movieItem__info{
+  color: $color-white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include widthAndHeight(64%,100%);
+  padding: 9px;
+}
+.movieItem__title{
+  //@include fontSizeWeight(16px,600);
+
+}
+.movieItem__details{
+  display: flex;
+  justify-content: space-between;
+}

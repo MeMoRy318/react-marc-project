@@ -1,0 +1,28 @@
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.userInfo__icon {
+  color: white;
+  font-size: 24px;
+  border-radius: 50px;
+  padding: 5px 8px;
+  background: silver;
+  cursor: pointer;
+}
+
+.userInfo__content {
+  position: absolute;
+  top: 170%;
+  background: #333333;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  opacity: 0;
+}
+
+.userInfo__icon:hover + .userInfo__content {
+  opacity: 1;
+}

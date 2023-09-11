@@ -1,0 +1,32 @@
+.rating {
+  position: relative;
+  width: 200px;
+}
+.rating .rating_stars {
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.rating .rating_stars span {
+  cursor: pointer;
+  width: 18px;
+  height: 15px;
+  display: inline-block;
+  clip-path: polygon(50% 0%, 63% 38%, 100% 38%, 69% 59%, 82% 100%, 50% 75%, 18% 100%, 31% 59%, 0% 38%, 37% 38%);
+}
+.rating .rating_stars .rating_stars_back {
+  display: flex;
+}
+.rating .rating_stars .rating_stars_back span {
+  background: #e0e0e0;
+}
+.rating .rating_stars .rating_stars_fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.rating .rating_stars .rating_stars_fill span {
+  background: #ebbb36;
+}
