@@ -17,9 +17,14 @@ const loadingAndErrorSlice = createSlice({
     extraReducers: builder =>
         builder
             .addMatcher(
-                (action) =>
-                    !action.type.startsWith('deleteOrAdd/favoriteSlice') &&
-                    !action.type.startsWith('searchMovies/searchSlice'),
+                (action) => {
+                    if (action.type.startsWith('deleteOrAdd/favoriteSlice')) {
+                        return !action.type.startsWith('deleteOrAdd/favoriteSlice');
+                    }else if (action.type.startsWith('searchMovies/searchSlice')) {
+                        return !action.type.startsWith('searchMovies/searchSlice');
+                    }
+                },
+
                 (state) => {
                     state.isLoading = true;
                     state.error = null;
