@@ -1,13 +1,10 @@
 import React, { FC, PropsWithChildren } from 'react';
-
 import { useInView } from 'react-intersection-observer';
-
 import { useNavigate } from 'react-router-dom';
 
 import { IMovies } from '../../interface';
 import { StarsRating } from '../../UI';
 import { urls } from '../../configs';
-
 import image from '../../assets/img/imageNotFound.png';
 
 import styles from './SearchMovieItem.module.scss';

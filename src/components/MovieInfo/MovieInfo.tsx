@@ -3,9 +3,7 @@ import React, { FC, memo, PropsWithChildren } from 'react';
 import { IMovie } from '../../interface';
 import { urls } from '../../configs';
 import { GenreBadge, StarsRating } from '../../UI';
-
 import { useAppDispatch } from '../../hooks';
-
 import { favoriteActions } from '../../redux/slices';
 
 import styles from './MovieInfo.module.scss';

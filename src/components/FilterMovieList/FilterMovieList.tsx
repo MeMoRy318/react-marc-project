@@ -1,11 +1,9 @@
 import React, { FC, PropsWithChildren, useEffect } from 'react';
-
 import { useSearchParams } from 'react-router-dom';
 
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { filterActions } from '../../redux/slices';
 import { FilterMovieItem } from '../FilterMovieItem/FilterMovieItem';
-
 import { Pagination } from '../../UI';
 
 

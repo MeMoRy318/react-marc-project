@@ -1,5 +1,4 @@
 import React, { FC, PropsWithChildren, useEffect } from 'react';
-
 import { useNavigate } from 'react-router-dom';
 
 import { Button } from '../../UI';

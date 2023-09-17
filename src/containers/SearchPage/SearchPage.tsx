@@ -1,5 +1,4 @@
 import React, { FC, PropsWithChildren } from 'react';
-
 import { useParams } from 'react-router-dom';
 
 import styles from '../FilterMoviePage/FilterMoviePage.module.scss';

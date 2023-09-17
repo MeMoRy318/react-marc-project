@@ -1,7 +1,6 @@
 import React, { FC, ReactNode } from 'react';
 
 import { urls } from '../../configs';
-
 import { ICast } from '../../interface';
 
 import styles from './PosterPreview.module.scss';

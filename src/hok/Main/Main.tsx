@@ -1,10 +1,10 @@
 import React, { FC, PropsWithChildren } from 'react';
 
 import { useAppSelector } from '../../hooks';
-
 import { ErrorComponent, LoadingSpinner } from '../../UI';
 
 import styles from './Main.module.scss';
+
 type IProps = PropsWithChildren
 
 const Main: FC<IProps> = ({ children }) => {

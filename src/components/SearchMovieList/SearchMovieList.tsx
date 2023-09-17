@@ -1,5 +1,4 @@
 import React, { FC, PropsWithChildren, useEffect } from 'react';
-
 import { useSearchParams } from 'react-router-dom';
 
 import styles from '../FilterMovieList/FilterMovieList.module.scss';

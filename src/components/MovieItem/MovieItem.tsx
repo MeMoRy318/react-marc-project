@@ -5,7 +5,6 @@ import { useInView } from 'react-intersection-observer';
 
 import { IMovies } from '../../interface';
 import { urls } from '../../configs';
-
 import image from '../../assets/img/imageNotFound.png';
 
 import styles from './MovieItem.module.scss';

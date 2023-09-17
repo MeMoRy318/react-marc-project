@@ -1,12 +1,10 @@
 import React, { FC, useEffect } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
-
 import { useNavigate } from 'react-router-dom';
 
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { filterActions, genreAction } from '../../redux/slices';
 import { createArrayYears } from '../../utility';
-
 import { IFilterFormParams, IGenre } from '../../interface';
 
 import styles from './FilterForm.module.scss';

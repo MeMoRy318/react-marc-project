@@ -3,9 +3,7 @@ import React, { FC, PropsWithChildren, useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { movieAction } from '../../redux/slices';
 import { MovieInfo } from '../MovieInfo/MovieInfo';
-
 import { PosterList } from '../PosterList/PosterList';
-
 import { Player } from '../../UI';
 
 import styles from './MoviesListCard.module.scss';
