@@ -30,8 +30,8 @@ const loadingAndErrorSlice = createSlice({
                     state.error = null;
                 },
             )
-            .addMatcher(isRejected(), (state) => {
-                state.error = 'Something went wrong ';
+            .addMatcher(isRejected(), (state, action) => {
+                state.error = action.payload as string;
                 state.isLoading = false;
             })
             .addMatcher(isFulfilled(), (state) => {
