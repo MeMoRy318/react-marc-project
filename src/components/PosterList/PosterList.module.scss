@@ -1,0 +1,27 @@
+.posters__card {
+  display: flex;
+  justify-content: space-between;
+  border-top: silver 1px solid;
+  padding: 20px 0;
+  min-height: 350px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+  column-gap: 1%;
+}
+
+.posters__button {
+  font-size: 36px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.posters__button:hover {
+  color: #ff4500;
+  transform: scale(1.2);
+}

@@ -22,4 +22,4 @@ const Layout: FC<IProps> = () => {
     );
 };
 
-export { Layout };
+export default Layout;

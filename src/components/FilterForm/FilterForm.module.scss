@@ -1,0 +1,150 @@
+.filterForm{
+  display: flex;
+  flex-direction: column;
+  width: 24%;
+}
+.filterForm__sticky{
+  position:sticky;
+  top:20%;
+}
+.filterForm h1{
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 25px;
+
+}
+.filterForm h2{
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 10px;
+}
+.filterForm__text{
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 15px;
+  color: #6c6c6c;
+}
+.filterForm div{
+  margin-bottom: 20px;
+}
+
+.filterForm div:nth-child(5){
+  margin-bottom: 35px;
+}
+.filterForm__inputBoxYear{
+
+}
+.filterForm__title{
+  width: 100%;
+  text-align:start;
+  font-size: 18px;
+  font-weight: 400;
+}
+.filterForm__inputYear{
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 5px;
+  padding: 0 15px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 17px;
+  background: white;
+  width: 40%;
+}
+.filterForm__inputBoxVote{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.filterForm__inputVote{
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 5px;
+  padding: 0 15px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 17px;
+  background: white;
+  width: 48%;
+}
+.filterForm__inputBoxSort{
+
+}
+.filterForm__inputSort{
+  width: 100%;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 5px;
+  padding: 0 15px;
+  height: 40px;
+  font-size: 17px;
+  line-height: 17px;
+  background: white;
+}
+.filterForm__buttonBox{
+  display: flex;
+  flex-direction: column;
+  /*margin-bottom: 0;*/
+
+}
+.filterForm__buttonApply{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  color: white;
+  font-weight: 500;
+  padding: 13px 15px;
+  font-size: 16px;
+  line-height: 16px;
+  border: 1px solid transparent;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #005381;
+  /*transition: color .3s ease,background-color .3s ease,border-color .3s ease;*/
+  margin-bottom: 15px;
+
+}
+
+
+.filterForm__buttonApply:hover{
+  transform: scale(1.01);
+  transition: 200ms;
+  box-shadow: 2px 2px 6px rgba(103, 103, 103, 0.4);
+}
+
+.filterForm__buttonApply:active {
+  transform: scale(1);
+  transition: 200ms;
+  box-shadow: none;
+
+}
+.filterForm__buttonReset{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  color: #003c59;
+  font-weight: 500;
+  padding: 13px 15px;
+  font-size: 16px;
+  line-height: 16px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid #003c59;
+  /*margin-bottom: 10px;*/
+  /*box-shadow: 2px 2px 6px rgba(103, 103, 103, 0.4);*/
+  transition: 200ms;
+
+
+}
+.filterForm__buttonReset:hover{
+  transform: scale(1.01);
+  transition: 200ms;
+  box-shadow: 2px 2px 6px rgba(103, 103, 103, 0.4);
+
+}
+.filterForm__buttonReset:active {
+  transform: scale(1);
+  transition: 200ms;
+  box-shadow: none;
+
+}

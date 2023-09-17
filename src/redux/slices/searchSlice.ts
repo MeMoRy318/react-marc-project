@@ -9,7 +9,7 @@ interface IState {
     error:string
     movies:IMovies[]
     page:number
-    total_pages:number
+    totalPages:number
 }
 
 const initialState:IState = {
@@ -17,15 +17,15 @@ const initialState:IState = {
     error: null,
     movies: [],
     page: 1,
-    total_pages: 1,
+    totalPages: 1,
 };
 
-const searchMovies = createAsyncThunk<IMovieListResponse, ISearchParams>(
+const searchMovies = createAsyncThunk<{ data:IMovieListResponse; isQuerySearch:boolean  }, ISearchParams>(
     'searchMovies/searchSlice',
-    async (params, { rejectWithValue }) => {
+    async ({ isQuerySearch = false, ...params }, { rejectWithValue }) => {
         try {
             const { data } = await movieService.search(params);
-            return data;
+            return { data, isQuerySearch };
         }catch (e) {
             const error = e as AxiosError;
             return rejectWithValue(error.message);
@@ -39,17 +39,24 @@ const searchSlice = createSlice({
     reducers: {
         clearMoviesArray: state => {
             state.movies = [];
-            state.total_pages = 1;
+            state.totalPages = 1;
             state.page = 1;
         },
     },
+
     extraReducers: builder => builder
         .addCase(searchMovies.fulfilled, (state, action) => {
+            const { isQuerySearch, data } = action.payload;
+
             state.error = null;
             state.isLoading = false;
-            state.movies = [...state.movies, ...action.payload.results];
-            state.total_pages = action.payload.total_pages;
-            state.page = action.payload.page;
+            state.totalPages = data.total_pages;
+            state.page = data.page;
+            if (isQuerySearch) {
+                state.movies = data.results;
+            }else {
+                state.movies = [...state.movies, ...data.results];
+            }
         })
         .addCase(searchMovies.pending, state => {
             state.isLoading = true;

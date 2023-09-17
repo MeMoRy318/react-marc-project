@@ -1,7 +1,8 @@
 $color-red:red;
 $color-white:white;
 $color-black: #141414;
-$color-blue:blue;
+$color-blue: #005380;
+$color-green: green;
 
 @mixin widthAndHeight($w,$h){
   width: $w;
@@ -20,7 +21,7 @@ $color-blue:blue;
 }
 
 .content{
-  max-width: 1200px;
+  max-width: 80%;
   width: 100%;
   margin: 0 auto;
 }

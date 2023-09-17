@@ -1,0 +1,25 @@
+/* MoviesList.module.scss */
+@import "../../utility/styles/var.module";
+
+.buttonRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 15vh;
+}
+
+.movieRow {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 4vh;
+}
+
+.buttonCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15vh;
+}

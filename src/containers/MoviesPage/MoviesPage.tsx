@@ -1,13 +1,20 @@
 import React, { FC, PropsWithChildren } from 'react';
 
+import { MoviesList, Slider } from '../../components';
+
+import styles from './MoviesPage.module.scss';
+
 type IProps = PropsWithChildren
 
 const MoviesPage: FC<IProps> = () => {
     return (
-        <div>
-
-        </div>
+        <>
+            <Slider/>
+            <div className={styles.movies}>
+                <MoviesList/>
+            </div>
+        </>
     );
 };
 
-export { MoviesPage };
+export default MoviesPage;

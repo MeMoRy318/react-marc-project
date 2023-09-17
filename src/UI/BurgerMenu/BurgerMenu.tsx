@@ -38,7 +38,7 @@ const BurgerMenu: FC<IProps> = ( ) => {
             </div>
 
             {isOpen && (
-                <nav className={styles.menu__box}>
+                <nav className={styles.menu__box} onClick={handleMenuClick}>
                     <li>
                         <Link className={styles.menu__item} to={'/'}>
                             Home

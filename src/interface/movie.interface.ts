@@ -16,7 +16,10 @@ interface IMovies {
     vote_average: number
     vote_count: number
 }
-
+interface IPopularMovies {
+    image:string
+    title:string
+}
 interface IMovieListResponse {
     page: number
     results: IMovies[]
@@ -77,4 +80,22 @@ interface IMovie {
     vote_count: number
 }
 
-export type { IMovie, IMovies, IMovieListResponse, IResponse };
+interface ITrailer {
+    iso_639_1: string
+    iso_3166_1: string
+    name: string
+    key: string
+    site: string
+    size: number
+    type: string
+    official: boolean
+    published_at: string
+    id: string
+}
+
+interface IMovieTrailers {
+    id: number
+    results: ITrailer[]
+}
+
+export type { IMovie, IMovies, IMovieListResponse, IResponse, IPopularMovies, IMovieTrailers, ITrailer };

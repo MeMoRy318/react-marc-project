@@ -1,13 +1,12 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 
 import { EPoints } from './configs';
-import { Layout } from './layout';
-import { MoviesPage } from './containers';
+import { ELazyLoadLayout, ELazyLoadRoutes, LazyLoadLayout, LazyLoadRoutes } from './hok';
 
 const routers = createBrowserRouter([
     {
         path: EPoints.BASE,
-        element: <Layout/>,
+        element: LazyLoadLayout(ELazyLoadLayout.LAYOUT),
         children: [
             {
                 index: true,
@@ -15,7 +14,23 @@ const routers = createBrowserRouter([
             },
             {
                 path: EPoints.MOVIES_LIST,
-                element: <MoviesPage/>,
+                element: LazyLoadRoutes(ELazyLoadRoutes.MOVIES),
+            },
+            {
+                path: EPoints.MOVIE_ID,
+                element: LazyLoadRoutes(ELazyLoadRoutes.MOVIE_LIST),
+            },
+            {
+                path: EPoints.FILTER,
+                element: LazyLoadRoutes(ELazyLoadRoutes.FILTER_MOVIE),
+            },
+            {
+                path: EPoints.SEARCH,
+                element: LazyLoadRoutes(ELazyLoadRoutes.SEARCH),
+            },
+            {
+                path: EPoints.FAVORITE,
+                element: LazyLoadRoutes(ELazyLoadRoutes.FAVORITE),
             },
         ],
     },

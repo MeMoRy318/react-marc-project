@@ -1,0 +1,19 @@
+@import "../../utility/styles/var.module";
+.button{
+background: $color-blue;
+  color: $color-white;
+  width: 20%;
+  height: 50%;
+  font-size: 24px;
+  border-radius: 5px;
+  transition: 400ms ease;
+
+  &:hover{
+    transform: scale(1.03);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  }
+  &:active{
+    transform: scale(1);
+    box-shadow: none;
+  }
+}

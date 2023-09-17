@@ -1,0 +1,48 @@
+@import "../../utility/styles/var.module";
+.movie{
+  @include widthAndHeight(19%,50vh);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 400ms ease;
+
+  &:hover{
+    transform: translate(0,-1%);
+  }
+}
+.movie__image{
+  max-height: 90%;
+  @include widthAndHeight(100%,100%);
+  background: slategray;
+}
+.movie__title{
+  @include fontSizeWeight(18px,550)
+}
+.movie__release_date{
+  @include fontSizeWeight(18px,500);
+}
+.movie__vote_average{
+  @include fontSizeWeight(18px,510);
+  position: absolute;
+  padding: 8px 15px;
+  background: $color-green;
+  color: $color-white;
+  border-radius: 10px;
+  top: 3%;
+  left: 3%;
+}
+.movie__badge{
+  @include fontSizeWeight(18px,510);
+  position: absolute;
+  color: $color-white;
+  padding: 8px 15px;
+  background: #b65b08;
+  top: 3%;
+  right: 3%;
+  border-radius: 10px;
+}
+.red{
+  background: $color-red;
+}

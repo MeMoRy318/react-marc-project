@@ -1,0 +1,5 @@
+@import "../../utility/styles/var.module";
+
+.movies{
+  @extend .content;
+}

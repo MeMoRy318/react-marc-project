@@ -1,0 +1,12 @@
+@import "../../utility/styles/var.module";
+
+.moviesList{
+  @extend .content;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5vh;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  padding: 30px 10px;
+  justify-content: flex-end;
+  min-height: 100vh;
+}

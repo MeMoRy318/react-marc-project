@@ -3,4 +3,6 @@
   flex-direction: column;
   height: 98%;
   overflow: auto;
+  position: relative;
+  z-index: 1;
 }

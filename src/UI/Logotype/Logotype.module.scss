@@ -20,6 +20,8 @@
   font-size: 24px;
   cursor: pointer;
   font-weight: 700;
+  position: relative;
+  z-index: 3;
 }
 .container:nth-child(1){
   color: #3498db;

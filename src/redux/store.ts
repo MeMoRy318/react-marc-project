@@ -1,11 +1,25 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import { movieReducer, searchReducer } from './slices';
+import {
+    creditReducer, favoriteReducer,
+    filterReducer,
+    genreReducer,
+    loadingAndErrorReducer,
+    movieReducer,
+    searchReducer,
+    videoReducer,
+} from './slices';
 
 const store = configureStore({
     reducer: {
         movieReducer,
         searchReducer,
+        creditReducer,
+        filterReducer,
+        genreReducer,
+        videoReducer,
+        loadingAndErrorReducer,
+        favoriteReducer,
     },
 });
 

@@ -11,8 +11,7 @@ const useScrollPagination = (query:string):IScrollPagination => {
 
     const lastElement = useRef<HTMLDivElement>(null);
     const observer = useRef<IntersectionObserver>(null);
-    // eslint-disable-next-line @typescript-eslint/naming-convention
-    const { isLoading, page, total_pages } = useAppSelector(state => state.searchReducer);
+    const { isLoading, page, totalPages } = useAppSelector(state => state.searchReducer);
     const dispatch = useAppDispatch();
 
     useEffect(() => {
@@ -22,7 +21,7 @@ const useScrollPagination = (query:string):IScrollPagination => {
         const callback: IntersectionObserverCallback = (entries, observer) => {
             if (
                 entries[0].isIntersecting &&
-                page < total_pages
+                page < totalPages
             ) {
                 dispatch(searchAction.searchMovies({ page: page + 1, query }));
             }

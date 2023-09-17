@@ -1,0 +1,94 @@
+.movieInfo {
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.backdropPath {
+  height: 90vh;
+  width: 35%;
+  background: center/cover no-repeat;
+}
+
+.content {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 6%;
+}
+
+.logoPatch {
+  height: 20vh;
+  width: 70%;
+  background: center/100% 100% no-repeat;
+}
+
+.title {
+  font-size: 36px;
+  letter-spacing: 1px;
+}
+
+.btn {
+  display: flex;
+  width: 35%;
+  column-gap: 10%;
+}
+
+.genre{
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  column-gap: 3%;
+}
+.btn button {
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 4% 15%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease; /* Add transitions for background and scale */
+}
+
+.btn button:nth-child(1) {
+  background: linear-gradient(to right, #f58b24, #f03255);
+}
+
+.btn button:nth-child(2) {
+  background: linear-gradient(to right, #93329e, #2b98f0);
+}
+
+.btn button:hover {
+  filter: brightness(1.2);
+}
+
+.btn button:active {
+  transform: scale(0.95);
+}
+
+.description {
+  width: 50%;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.subTitle {
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.description > div {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+.overview {
+  width: 80%;
+  font-size: 18px;
+  font-weight: 500;
+}

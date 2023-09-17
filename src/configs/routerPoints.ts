@@ -5,5 +5,5 @@ export enum EPoints {
     FILTER = '/filter/:paramsId',
     SEARCH = '/search/:query',
     FAVORITE = '/favorite',
-    NOT_FOUND_PAGE = '*'
+    NOT_FOUND_PAGE = '*',
 }
