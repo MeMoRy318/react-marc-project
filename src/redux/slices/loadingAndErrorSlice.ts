@@ -31,7 +31,7 @@ const loadingAndErrorSlice = createSlice({
                 },
             )
             .addMatcher(isRejected(), (state) => {
-                state.error = 'Something went wrong';
+                state.error = 'Something went wrong ';
                 state.isLoading = false;
             })
             .addMatcher(isFulfilled(), (state) => {
