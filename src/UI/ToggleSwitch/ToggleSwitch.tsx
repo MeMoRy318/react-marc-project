@@ -1,11 +1,14 @@
-import React, { FC, PropsWithChildren, useState } from 'react';
+import React, { FC, PropsWithChildren, useContext } from 'react';
+
+import { ThemeContext } from '../../hok';
 
 import styles from './ToggleSwitch.module.scss';
 
 type IProps = PropsWithChildren
 
 const ToggleSwitch:FC<IProps> = () => {
-    const [trigger, setTrigger] = useState<boolean>(false);
+    const { trigger, setTrigger } = useContext(ThemeContext);
+
     const handleToggle = () => {
         setTrigger(prevState => !prevState);
     };

@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 
 import { routers } from './routers';
 import { store } from './redux';
+import { ThemaContextProvider } from './hok';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement,
@@ -15,7 +16,9 @@ const root = ReactDOM.createRoot(
 
 root.render(
     <Provider store={store}>
-        <RouterProvider router={routers}/>,
+        <ThemaContextProvider>
+            <RouterProvider router={routers}/>,
+        </ThemaContextProvider>
     </Provider>,
 );
 

@@ -6,7 +6,8 @@ export enum ELazyLoadRoutes {
     MOVIE_LIST='MoviesListCardPage',
     MOVIES='MoviesPage',
     SEARCH='SearchPage',
-    FAVORITE='FavoritePage'
+    FAVORITE='FavoritePage',
+    ERROR='ErrorPage'
 }
 const LazyLoadRoutes = (componentName: ELazyLoadRoutes) => {
     const LazyElement = lazy(() => import(`../../containers/${componentName}/${componentName}.tsx`));

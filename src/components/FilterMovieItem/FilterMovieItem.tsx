@@ -6,9 +6,7 @@ import { IMovies } from '../../interface';
 import { StarsRating } from '../../UI';
 import { urls } from '../../configs';
 import image from '../../assets/img/imageNotFound.png';
-
 import { useAppDispatch } from '../../hooks';
-
 import { favoriteActions } from '../../redux/slices';
 
 import styles from './FilterMovieItem.module.scss';

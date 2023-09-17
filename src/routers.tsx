@@ -32,6 +32,10 @@ const routers = createBrowserRouter([
                 path: EPoints.FAVORITE,
                 element: LazyLoadRoutes(ELazyLoadRoutes.FAVORITE),
             },
+            {
+                path: EPoints.NOT_FOUND_PAGE,
+                element: LazyLoadRoutes(ELazyLoadRoutes.ERROR),
+            },
         ],
     },
 ]);
